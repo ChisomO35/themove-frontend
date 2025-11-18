@@ -106,7 +106,7 @@
       chatWindow.scrollTop = chatWindow.scrollHeight;
 
       // send request to backend
-      const res = await fetch("https://api.usethemove.com/chatJSON", {
+      const res = await fetch("https://themove-backend-production.up.railway.app/chatJSON", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: text }),

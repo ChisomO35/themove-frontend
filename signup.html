@@ -240,7 +240,7 @@
             );
 
             const idToken = await userCred.user.getIdToken();
-            await fetch("https://api.usethemove.com/createUser", {
+            await fetch("https://themove-backend-production.up.railway.app/createUser", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

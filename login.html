@@ -192,12 +192,12 @@
             return;
           }
 
-          await fetch("https://api.usethemove.com/syncEmailVerification", {
+          await fetch("https://themove-backend-production.up.railway.app/syncEmailVerification", {
             method: "POST",
             headers: { Authorization: `Bearer ${idToken}` },
           });
 
-          const res = await fetch(`https://api.usethemove.com/checkUserSetup?uid=${user.uid}`, {
+          const res = await fetch(`https://themove-backend-production.up.railway.app/checkUserSetup?uid=${user.uid}`, {
             headers: { Authorization: `Bearer ${idToken}` },
           });
           const data = await res.json();

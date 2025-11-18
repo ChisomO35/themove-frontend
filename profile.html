@@ -314,7 +314,7 @@
         }
 
         try {
-          const res = await fetch(`https://api.usethemove.com/getUser/${uid}`);
+          const res = await fetch(`https://themove-backend-production.up.railway.app/getUser/${uid}`);
           if (!res.ok) return showToast("⚠️ Couldn't load your profile.", "error");
 
           const user = await res.json();
@@ -373,7 +373,7 @@
 
           const idToken = await user.getIdToken(true);
 
-          const res = await fetch("https://api.usethemove.com/updateUser", {
+          const res = await fetch("https://themove-backend-production-up.railway.app/updateUser", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

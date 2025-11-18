@@ -375,7 +375,7 @@
 
         try {
           const idToken = await currentUser.getIdToken(true);
-          const res = await fetch("https://api.usethemove.com/updateUser", {
+          const res = await fetch("https://themove-backend-production.up.railway.app/updateUser", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
